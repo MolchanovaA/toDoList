@@ -1,0 +1,50 @@
+:root {
+  --background-color: #eee3cb;
+  --border-Color: #b7c4cf;
+  --table-header-color: #b7c4cf84;
+}
+
+body {
+  background-color: var(--background-color);
+  padding: 20px;
+  font-family: "Fredoka One", cursive;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 40px;
+}
+.mainList,
+.archivedList {
+  max-width: 80%;
+  border: 2px solid var(--border-Color);
+  border-radius: 5px;
+  margin: 30px 0;
+  padding: 10px;
+}
+
+.mainList > li:first-child,
+.archivedList > li:first-child {
+  background-color: var(--table-header-color);
+  font-weight: 700;
+}
+
+.mainList li ul,
+.archivedList li ul {
+  background-color: rgba(173, 19, 19, 0.139);
+  border: 1px solid red;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.mainList li ul li {
+  flex-basis: 100px;
+  flex-shrink: 1;
+  display: block;
+  background-color: aqua;
+  align-self: center;
+}
