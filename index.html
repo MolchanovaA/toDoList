@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./reset.css" />
+    <script
+      src="https://kit.fontawesome.com/cef6e28be6.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,10 +22,10 @@
   </head>
   <body>
     <section class="mainContainer">
-      <h1>Wellcome to ToDo list</h1>
+      <h1>ToDo list</h1>
 
       <ul class="mainList">
-        <li>
+        <li class="tableHeader">
           <ul>
             <li>Name</li>
             <li>Created</li>
@@ -31,60 +35,75 @@
             <li>Settings</li>
           </ul>
         </li>
-        <li>
+        <li class="note">
           <ul>
             <li>Shopping List</li>
             <li>Any Date</li>
             <li>Home Task</li>
             <li>Bread, Tomatoes</li>
             <li>Dates</li>
-            <li>
-              <span>Edit</span>
-              <span>Archive</span>
-              <span>Delete</span>
+            <li class="editButtons">
+              <span class="edit"
+                ><i class="fa-solid fa-pen-to-square"></i
+              ></span>
+              <span class="archive"
+                ><i class="fa-solid fa-box-archive"></i
+              ></span>
+              <span class="delete"><i class="fa-solid fa-trash-can"></i></span>
             </li>
           </ul>
         </li>
-        <li>
+        <li class="note">
           <ul>
             <li>New Feature</li>
             <li>Any Date</li>
             <li>Idea</li>
             <li>To Emplements</li>
             <li>Dates</li>
-            <li>
-              <span>Edit</span>
-              <span>Archive</span>
-              <span>Delete</span>
+            <li class="editButtons">
+              <span class="edit"
+                ><i class="fa-solid fa-pen-to-square"></i
+              ></span>
+              <span class="archive"
+                ><i class="fa-solid fa-box-archive"></i
+              ></span>
+              <span class="delete"><i class="fa-solid fa-trash-can"></i></span>
             </li>
           </ul>
         </li>
-        <li></li>
+        <li class="createNewNote">
+          <div class="tableButton">create a note</div>
+        </li>
       </ul>
 
       <ul class="archivedList">
-        <li>
+        <li class="tableHeader">
           <ul>
-            <li>Note Category</li>
+            <li>Category</li>
             <li>Active</li>
             <li>Archived</li>
           </ul>
         </li>
-        <li>
+        <li class="archiveNote">
           <ul>
             <li>Tasks</li>
             <li>13</li>
             <li>4</li>
           </ul>
         </li>
-        <li>
+        <li class="archiveNote">
           <ul>
             <li>Random Thoughts</li>
             <li>7</li>
             <li>12</li>
           </ul>
         </li>
+        <li class="showArchive">
+          <div class="tableButton">show archive</div>
+        </li>
       </ul>
     </section>
+
+    <script src="./main.js"></script>
   </body>
 </html>

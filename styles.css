@@ -2,6 +2,7 @@
   --background-color: #eee3cb;
   --border-Color: #b7c4cf;
   --table-header-color: #b7c4cf84;
+  --notesColor: #6b685a;
 }
 
 body {
@@ -14,37 +15,85 @@ body {
 h1 {
   text-align: center;
   font-weight: 800;
-  font-size: 40px;
+  font-size: 5vw;
 }
 .mainList,
 .archivedList {
-  max-width: 80%;
   border: 2px solid var(--border-Color);
   border-radius: 5px;
   margin: 30px 0;
   padding: 10px;
 }
 
-.mainList > li:first-child,
-.archivedList > li:first-child {
-  background-color: var(--table-header-color);
+.mainList .tableHeader,
+.archivedList .tableHeader {
+  background-color: var(--notesColor);
+  color: aliceblue;
+  padding: 10px 0;
   font-weight: 700;
+  font-size: 2.5vw;
+  border-radius: 5px;
 }
 
 .mainList li ul,
-.archivedList li ul {
-  background-color: rgba(173, 19, 19, 0.139);
-  border: 1px solid red;
+.archivedList li ul,
+.mainList li .createNoteform,
+li.tableButton {
+  /* background-color: aqua; */
+  border-radius: 5px;
   padding: 5px;
   margin: 5px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
-.mainList li ul li {
+.note li,
+.archiveNote li,
+.tableHeader li {
   flex-basis: 100px;
   flex-shrink: 1;
+  flex-grow: 1;
   display: block;
-  background-color: aqua;
   align-self: center;
+}
+.tableButton {
+  padding: 3px;
+  border: 2px solid var(--border-Color);
+  display: inline-block;
+  border-radius: 5px;
+}
+.tableButton:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+li.editButtons {
+  display: flex;
+  justify-content: space-between;
+}
+li.editButtons span:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+li.note:nth-child(2n),
+li.archiveNote:nth-child(2n) {
+  border-radius: 5px;
+  background-color: var(--table-header-color);
+}
+
+input.nameField,
+input.contentField {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 5px;
+}
+li select {
+  color: var(--notesColor);
+  font-weight: 700;
+}
+
+.saveNote:hover {
+  cursor: pointer;
+}
+input.nameField {
+  max-width: 100px;
 }
