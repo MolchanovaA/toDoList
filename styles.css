@@ -54,6 +54,7 @@ li.tableButton {
   flex-grow: 1;
   display: block;
   align-self: center;
+  margin: 0 5px;
 }
 .tableButton {
   padding: 3px;
@@ -74,8 +75,8 @@ li.editButtons span:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
-li.note:nth-child(2n),
-li.archiveNote:nth-child(2n) {
+li.note,
+li.archiveNote {
   border-radius: 5px;
   background-color: var(--table-header-color);
 }
