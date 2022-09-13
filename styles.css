@@ -18,14 +18,17 @@ h1 {
   font-size: 5vw;
 }
 .mainList,
+.shortlistList,
 .archivedList {
   border: 2px solid var(--border-Color);
   border-radius: 5px;
   margin: 30px 0;
   padding: 10px;
+  transition: all 1s ease-in-out;
 }
 
 .mainList .tableHeader,
+.shortlistList .tableHeader,
 .archivedList .tableHeader {
   background-color: var(--notesColor);
   color: aliceblue;
@@ -36,6 +39,7 @@ h1 {
 }
 
 .mainList li ul,
+.shortlistList li ul,
 .archivedList li ul,
 .mainList li .createNoteform,
 li.tableButton {
@@ -46,8 +50,11 @@ li.tableButton {
   display: flex;
   justify-content: space-between;
 }
+li h3 {
+  text-align: center;
+}
 .note li,
-.archiveNote li,
+.shortlistNote li,
 .tableHeader li {
   flex-basis: 100px;
   flex-shrink: 1;
@@ -76,7 +83,7 @@ li.editButtons span:hover {
   transform: scale(1.1);
 }
 li.note,
-li.archiveNote {
+li.shortlistNote {
   border-radius: 5px;
   background-color: var(--table-header-color);
 }
@@ -97,4 +104,17 @@ li select {
 }
 input.nameField {
   max-width: 100px;
+}
+
+.archivedList {
+  display: none;
+}
+.archivedList.show {
+  display: block;
+}
+.editNote.hideButtons,
+.archiveNote.hideButtons,
+.deleteNote.hideButtons,
+.returnToActive.hideButtons {
+  display: none;
 }

@@ -26,6 +26,7 @@
 
       <ul class="mainList">
         <li class="tableHeader">
+          <h3>Active List</h3>
           <ul>
             <li>Name</li>
             <li>Created</li>
@@ -46,8 +47,11 @@
               <span class="edit"
                 ><i class="fa-solid fa-pen-to-square editNote"></i
               ></span>
+              <span class="active"
+                ><i class="fa-solid fa-plus returnToActive hideButtons"></i
+              ></span>
               <span class="archive"
-                ><i class="fa-solid fa-box-archive"></i
+                ><i class="fa-solid fa-box-archive archiveNote"></i
               ></span>
               <span class="delete"
                 ><i class="fa-solid fa-trash-can deleteNote"></i
@@ -66,8 +70,11 @@
               <span class="edit"
                 ><i class="fa-solid fa-pen-to-square editNote"></i
               ></span>
+              <span class="active"
+                ><i class="fa-solid fa-plus returnToActive hideButtons"></i
+              ></span>
               <span class="archive"
-                ><i class="fa-solid fa-box-archive"></i
+                ><i class="fa-solid fa-box-archive archiveNote"></i
               ></span>
               <span class="delete"
                 ><i class="fa-solid fa-trash-can deleteNote"></i
@@ -82,32 +89,52 @@
 
       <ul class="archivedList">
         <li class="tableHeader">
+          <h3>Archive List</h3>
+          <ul>
+            <li>Name</li>
+            <li>Created</li>
+            <li>Category</li>
+            <li>Content</li>
+            <li>Dates</li>
+            <li>Settings</li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="shortlistList">
+        <li class="tableHeader">
+          <h3>Short List</h3>
           <ul>
             <li>Category</li>
             <li>Active</li>
             <li>Archived</li>
           </ul>
         </li>
-        <li class="archiveNote">
+        <li class="shortlistNote">
           <ul>
-            <li>Tasks</li>
-            <li>13</li>
-            <li>4</li>
+            <li>Home Task</li>
+            <li>1</li>
+            <li>0</li>
           </ul>
         </li>
-        <li class="archiveNote">
+        <li class="shortlistNote">
           <ul>
-            <li>Random Thoughts</li>
-            <li>7</li>
-            <li>12</li>
+            <li>Idea</li>
+            <li>1</li>
+            <li>0</li>
           </ul>
         </li>
         <li class="showArchive">
-          <div class="tableButton">show archive</div>
+          <div class="tableButton showArchiveButton">show archive</div>
         </li>
       </ul>
     </section>
-
+    <script src="./helperObjects.js"></script>
+    <script src="./archiveCreating.js"></script>
+    <script src="./updadingArchiveAndActiveCategories.js"></script>
+    <script src="./inputCreating.js"></script>
+    <script src="./noteSaving.js"></script>
+    <script src="./noteCreating.js"></script>
     <script src="./main.js"></script>
   </body>
 </html>
