@@ -1,4 +1,4 @@
-//save note in case of any changings
+//save note in case of any changes
 
 function saveNote(info, placeToSave) {
   if (!info) return;
@@ -44,14 +44,14 @@ function saveNote(info, placeToSave) {
 function checkDateInContent(content) {
   if (!content) return " ";
 
-  let splitedContent = content.split(" ");
+  let splitContent = content.split(" ");
   let dateFromContent = [];
-  let dateDevidres = ["/", ".", "-", ","];
-  splitedContent.forEach((word) => {
+  let dateDeviders = ["/", ".", "-", ","];
+  splitContent.forEach((word) => {
     let wordArray = word.split("");
 
     if (!isNaN(+wordArray[0])) {
-      dateDevidres.forEach((dev) => {
+      dateDeviders.forEach((dev) => {
         if (
           word.split(dev).length === 2 &&
           word.split(dev)[0] <= 12 &&

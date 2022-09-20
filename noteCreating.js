@@ -6,8 +6,9 @@ function toCreateANewNoteField(
 ) {
   let noteForm;
   if (placeForNewNote && !notesCategories && !inputsInfo && archived) {
-    let newActiveNote = archived.childNodes[1];
-    let arrayOfEditButtons = archived.childNodes[1].lastElementChild.childNodes;
+    let newActiveNote = archived.children[0];
+
+    let arrayOfEditButtons = archived.children[0].lastElementChild.childNodes;
     arrayOfEditButtons.forEach((button) => {
       if (button.nodeType === 1 && button.className != "active") {
         button.childNodes[0].classList.remove("hideButtons");
